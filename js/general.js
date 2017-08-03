@@ -11,8 +11,6 @@ jQuery(document).ready(function($){
                 $('.header__nav').slideToggle();
             });
 
-
-
 		}
 	};
 

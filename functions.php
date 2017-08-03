@@ -38,4 +38,14 @@ foreach (glob(__DIR__ . "/includes/enqueues/*.php") as $filename)
 */
 foreach (glob(__DIR__ . "/includes/cpts/*.php") as $filename)
     include $filename;
-?>
+
+
+
+
+/*
+*   =================================================================================================
+*   PHP LIBS
+*   =================================================================================================
+*/
+foreach (glob(__DIR__ . "/includes/libs/*.php") as $filename)
+	include $filename;

@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    # HomePage Active Obras
+\*------------------------------------*/
+
+.hlobras__item {
+  align-items: center;
+  height: 18.75em;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+  .hlobras__item > * {
+    position: relative;
+    z-index: 100;
+  }
+
+  .hlobras__h {
+    color: $baseLightColor;
+    font-size: 2.25em;
+  }
+
+  .hlobras__sh {
+    color: $baseLightColor;
+    font-weight: 600;
+    font-size: 1.12em;
+  }
+
+  .hlobras__item::after {
+    background-color: rgba(71,71,71,0.5);
+    content: " ";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+
+
