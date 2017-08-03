@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    # Button
+\*------------------------------------*/
+
+
+.button {
+  border-radius: 100px;
+  font-weight: 600;
+  padding: 0.43em 0.81em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+  .btn--primary {
+    @extend .button;
+    background: $highlightColor;
+    color: $baseLightColor;
+  }
+
+  .btn--secondary {
+    @extend .button;
+    background: $btnSecondaryBckg;
+    color: $baseLightColor;
+  }
+
+
+.link {
+  align-items: center;
+  display: flex;
+  font-family: $secondaryFontFamily;
+  font-size: 1.12rem;
+  text-transform: uppercase;
+}
+
+  .link .icon-tc-link {
+    display: inline-block;
+    font-size: 0.75em;
+    margin-left: 0.81em;
+  }

@@ -17,6 +17,8 @@
                 <p class="hlobras__sh"><?php echo $obra->getSubtitle(); ?></p>
             <?php endif; ?>
 
+            <a class="btn--primary" href="#" type="button">Ir a la obra</a>
+
         </div>
         <?php endif; ?>
 
@@ -24,5 +26,19 @@
 
 </section><!-- END .hlobras -->
     <?php endif; ?>
+
+
+
+
+
+<section class="bblock wrapper">
+
+    <h3 class="bblock__h">Somos la Compañía de <span>Teatro Avanti</span></h3>
+    <p>Creemos en un teatro sin artificio donde la palabra y la interpretación propongan una serie de interrogantes que inviten al espectador a la reflexión.</p>
+    <a href="#">Conócenos más a fondo <span class="icon-tc-link"></span></a>
+
+</section><!-- END .bblock -->
+
+
 
 <?php get_footer(); ?>

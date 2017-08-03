@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    # Basic Block (title, Desc and Link)
+\*------------------------------------*/
+
+.bblock {
+  padding-bottom: 2.62em;
+  padding-top: 1.75em;
+}
+
+  .bblock__h {
+    font-size: 1.12em;
+    margin-bottom: 0.56em;
+  }
+
+    .bblock__h span {
+      color: $highlightColor;
+    }
+
+
+  .bblock p {
+    font-size: 0.87em;
+  }
+
+  .bblock a {
+    display: block;
+    @extend .link;
+    margin-top: 1.68em;
+    text-align: right;
+  }
