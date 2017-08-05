@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    # Homepage Próximas fechas
+\*------------------------------------*/
+.hpevents{
+  display: flex;
+  flex-direction: column;
+}
+
+  .hpevents .bblock__h,
+  .hpevents .bblock__b { text-align: center; }
+
+
+  .hpevents__items {
+    margin-bottom: 63px;
+    margin-top: 34px;
+  }
+
+  .hpevents__item {
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+
+    .hpevents__item:last-child { margin-bottom: 0; }
+
+    .hpevents__item__fi {
+      height: auto;
+      margin-right: 9%;
+      width: 35%;
+    }
+
+    .hpevents__item__h {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .hpevents__item__meta {
+      display: inline-block;
+      flex: 0 1 50%;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .hpevents__item__ticket {
+      background-color: $highlightColor;
+      color: $baseLightColor;
+      flex: 1 0 100%;
+      font-family: $secondaryFontFamily;
+      padding-bottom: 12px;
+      padding-top: 12px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+
+  .hpevents__btn {
+    align-self: center;
+  }
