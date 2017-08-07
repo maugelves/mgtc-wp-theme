@@ -56,3 +56,17 @@
 }
 
 
+/* This tweak can break a container
+* and set an element to the full width of the viewport
+* @link https://codepen.io/chriscoyier/pen/xOjaYA
+ */
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: none;
+}
+

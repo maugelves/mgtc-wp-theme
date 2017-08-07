@@ -50,18 +50,23 @@
         <p class="bblock__b">Sigue de cerca los espectáculos actualmente en cartel de Avanti Teatro.</p>
 
 
-        <ul>
+        <ul class="hpgiras__items">
         <?php foreach( $obras as $obra ): ?>
             <li class="hpgiras__item">
 	            <?php echo get_the_post_thumbnail( $obra->getId(), 'post-thumbnail', ['class' => 'hpgiras__item__fi'] ); ?>
-                <div class="wrapper">
-                    <h2 class="hpgiras__item__h"><?php echo $obra->getTitle(); ?></h2>
-                    <p class="hpgiras__item__b"><?php echo $obra->getShortDescription(); ?></p>
-                    <a class="hpgiras__item__ticket" href="<?php the_permalink( $obra->getID() ); ?>" class="btn--secondary">Más información</a>
-                </div>
+                <h2 class="hpgiras__item__h"><?php echo $obra->getTitle(); ?></h2>
+
+                <?php
+                    // Show the "Entradas" button only if the obra has Gira posts
+                    if( count( $obra->getGiras() ) > 0 ): ?>
+                        <a class="hpgiras__item__ticket" href="<?php the_permalink( $obra->getID() ); ?>" class="btn--secondary">Entradas</a>
+                    <?php endif; ?>
+
             </li>
         <?php endforeach; ?>
         </ul>
+
+        <a class="btn--secondary" href="#">Ver espectáculos en gira</a>
 
     </div>
 
@@ -102,7 +107,7 @@
             </div>
 
             <?php if( !empty( $gira->getTicketsLink() ) ): ?>
-                <a class="hpevents__item__ticket" href="<?php echo $gira->getTicketsLink() ?>">Comprar entradas</a>
+                <a class="hpevents__item__ticket btn--primary" href="<?php echo $gira->getTicketsLink() ?>">Comprar entradas</a>
             <?php endif; ?>
 
         </li>
@@ -114,6 +119,36 @@
 </section><!-- END .hpevents -->
 <?php endif; ?>
 
+
+
+
+
+<section class="bblock hpactores">
+
+    <div class="wrapper">
+
+        <h2 class="bblock__h">Nuestros <span>actores</span></h2>
+        <p class="bblock__b">Actores en plantilla y colaboraciones</p>
+
+        <?php
+            $actores = \MGTC\Service\Actores::getInstance()->get_actors_for_homepage();
+            if( !empty( $actores ) ): ?>
+                <ul class="hpactores__list">
+                    <?php
+                    foreach( $actores as $actor ): /* @var $actor \MGTC\Models\Actor */ ?>
+                        <li class="hpactores__item">
+                            <?php echo get_the_post_thumbnail( $actor->getID(), 'post-thumbnail', array( 'class' => 'hpactores__item__fi' ) ); ?>
+                            <p class="hpactores__item__h"><?php echo $actor->getNombre(); ?></p>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+
+        <a href="#" class="btn--secondary hpevents__btn">Más actores</a>
+
+    </div>
+
+</section><!-- END .hpactores -->
 
 
 <?php get_footer(); ?>

@@ -2,8 +2,7 @@
     # Homepage Próximas fechas
 \*------------------------------------*/
 .hpevents{
-  display: flex;
-  flex-direction: column;
+
 }
 
   .hpevents .bblock__h,
@@ -17,18 +16,20 @@
 
   .hpevents__item {
     background-color: #F5F5F5;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     margin-bottom: 24px;
+    min-height: 172px;
+    padding: 12px 15px 12px 145px;
+    position: relative;
   }
 
     .hpevents__item:last-child { margin-bottom: 0; }
 
     .hpevents__item__fi {
-      height: auto;
-      margin-right: 9%;
-      width: 35%;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: auto;
     }
 
     .hpevents__item__h {
@@ -37,24 +38,25 @@
     }
 
     .hpevents__item__meta {
-      display: inline-block;
+      display: block;
       flex: 0 1 50%;
       font-size: 12px;
       line-height: 18px;
     }
 
     .hpevents__item__ticket {
-      background-color: $highlightColor;
-      color: $baseLightColor;
-      flex: 1 0 100%;
-      font-family: $secondaryFontFamily;
-      padding-bottom: 12px;
-      padding-top: 12px;
-      text-align: center;
-      text-transform: uppercase;
+      display: block;
+      padding-bottom: 5px;
+      padding-top: 6px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 14px;
+      margin-top: 10px;
     }
 
 
   .hpevents__btn {
-    align-self: center;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
   }

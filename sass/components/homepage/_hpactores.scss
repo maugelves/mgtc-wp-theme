@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    # HomePage Actores
+\*------------------------------------*/
+.hpactores {
+  background-color: #F5F5F5;
+  border-top: 1px solid #D1D1D1;
+}
+
+  .hpactores .bblock__h,
+  .hpactores .bblock__b{ text-align: center; }
+
+
+  .hpactores__list {
+    background-color: $baseLightColor;
+    margin-bottom: 38px;
+    margin-top: 44px;
+  }
+
+  .hpactores__item {
+    align-items: center;
+    border-top: 1px solid #D1D1D1;
+    display: flex;
+  }
+  .hpactores__item:last-child { border-bottom: 1px solid #D1D1D1; }
+
+  .hpactores__item__fi {
+    height: 70px;
+    display: inline-block;
+    margin-right: 27px;
+    object-fit: cover;
+    object-position: top center;
+    font-family: "object-fit:cover; object-position:top center;";
+    width: 100px;
+  }
+
+  .hpactores__item__h {
+    font-family: $secondaryFontFamily;
+    font-size: 18px;
+    margin: 0;
+  }
