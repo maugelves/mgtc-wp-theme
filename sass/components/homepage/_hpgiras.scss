@@ -66,13 +66,17 @@
   }
 
   .hpgiras__items {
+    align-items: stretch;
+    display: flex;
+    justify-content: space-between;
     max-width: none;
   }
 
   .hpgiras__item {
     border: 0;
-    display: block;
-    flex: 0 0 33%;
+    display: flex;
+    flex: 0 0 32%;
+    flex-direction: column;
     padding-bottom: 32px;
   }
   .hpgiras__item:last-child{border:0;}
@@ -91,13 +95,13 @@
     .hpgiras__item__fi {
       display: block;
       height: auto;
-      margin-bottom: 18px;
+      margin-right: 0;
     }
 
     .hpgiras__item__l {
       border-radius: 100px;
       display: block;
-      margin: 0 auto;
+      margin: auto auto 0;
       max-width: 200px;
       padding-left: 20px;
       padding-right: 20px;

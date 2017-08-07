@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
             // Dispositivo es mayor a 768px
             if( $(window).width() >= 768 ){
 
-                $(".hpgiras__items").addClass('owl-carousel');
+                /*$(".hpgiras__items").addClass('owl-carousel');
                 $(".hpgiras__items").owlCarousel({
                     autoplay: true,
                     dots: false,
@@ -30,7 +30,7 @@ jQuery(document).ready(function($){
                             margin: 40
                         }
                     }
-                });
+                });*/
 
 
 
