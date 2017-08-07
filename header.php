@@ -52,33 +52,33 @@
 
         <div class="wrapper mastheader__wrapper">
 
-            <div class="header__logo">
-                <?php
-                if ( function_exists( 'the_custom_logo' ) ) {
-                    the_custom_logo();
-                }
-                ?>
-            </div>
+                <div class="header__logo">
+                    <?php
+                    if ( function_exists( 'the_custom_logo' ) ) {
+                        the_custom_logo();
+                    }
+                    ?>
+                </div>
 
 
-            <div id="header__hamb">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+                <div id="header__hamb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
 
-            <nav class="header__nav" role="navigation">
+                <nav class="header__nav" role="navigation">
 
-                <?php
-                $args = array( 'container'     => '' );
-                wp_nav_menu( $args );
-                ?>
+                    <?php
+                    $args = array( 'container'     => '' );
+                    wp_nav_menu( $args );
+                    ?>
 
-            </nav>
+                </nav>
 
         </div>
 

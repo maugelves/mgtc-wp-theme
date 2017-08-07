@@ -5,3 +5,16 @@
   margin: 0 auto;
   width: 84.06%;
 }
+
+
+@media screen and ( min-width: $sm ){
+  .wrapper {
+    max-width: $sm;
+  }
+}
+
+@media screen and ( min-width: $lg ){
+  .wrapper {
+    max-width: $lg;
+  }
+}

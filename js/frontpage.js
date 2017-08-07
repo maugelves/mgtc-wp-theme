@@ -15,6 +15,7 @@ jQuery(document).ready(function($){
             // Dispositivo es mayor a 768px
             if( $(window).width() >= 768 ){
 
+                $(".hpgiras__items").addClass('owl-carousel');
                 $(".hpgiras__items").owlCarousel({
                     autoplay: true,
                     dots: false,
@@ -22,16 +23,18 @@ jQuery(document).ready(function($){
                     responsive: {
                         768: {
                             items: 2,
-                            margin: 20,
+                            margin: 20
                         },
                         1440: {
                             items: 3,
-                            margin: 40,
+                            margin: 40
                         }
                     }
                 });
 
 
+
+                $(".hpactores__list").addClass('owl-carousel');
                 $(".hpactores__list").owlCarousel({
                     autoplay: true,
                     dots: false,

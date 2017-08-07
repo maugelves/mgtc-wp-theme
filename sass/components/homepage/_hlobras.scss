@@ -63,6 +63,20 @@
 
 
 @media screen and ( min-width: $lg ) {
+
+  .hlobras__meta {
+    bottom: 10%;
+    text-align: left;
+    top: auto;
+    transform: none;
+  }
+
+    .hlobras__h {
+      font-size: 48px;
+    }
+
+    .hlobras__sh { font-size: 24px; }
+
   .hlobras__item {
     height: 500px;
   }

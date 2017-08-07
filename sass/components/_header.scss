@@ -3,25 +3,17 @@
 \*------------------------------------*/
 
 .mastheader {
-  /*align-items:      center;
-  display:          grid;
-  grid-template-columns: 70% 20%;
-  grid-template-areas: "mhlogo    mhhamb"
-                        "mhnav    mhnav";
-  justify-content:  space-between;
-  padding-top:          0.56em;
-  position:         relative;*/
+
 }
 
   .mastheader__wrapper {
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
 
   .header__logo {
-    padding-left:  5.93%;
     grid-area: mhlogo;
   }
 
@@ -32,9 +24,7 @@
     }
 
     #header__hamb {
-      grid-area: mhhamb;
       margin-left: auto;
-      margin-right: 15%;
     }
 
 
@@ -42,10 +32,13 @@
 /* MENU */
     .header__nav {
       background-color: #F5F5F5;
-      box-shadow:       0 2px 4px 0 rgba(0,0,0,0.50);
-      grid-area: mhnav;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
       display: none;
-      width:            100vw;
+      width: 100vw;
+      position: absolute;
+      top: 39px;
+      z-index: 250;
+      left: 0;
     }
 
       .header__nav .menu-item {

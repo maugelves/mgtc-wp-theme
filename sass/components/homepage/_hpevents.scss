@@ -79,3 +79,31 @@
     .hpevents__item:nth-child(2n+2){ margin-right: 0; }
 
 }
+
+
+
+@media screen and ( min-width: $lg ) {
+  .hpevents__item {
+    min-height: 260px;
+    padding: 0;
+    /*display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;*/
+    padding: 37px 37px 37px 222px;
+  }
+    .hpevents__item__h {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .hpevents__item__b {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  .hpevents__item__fi {
+    height: 100%;
+    width: auto;
+  }
+}

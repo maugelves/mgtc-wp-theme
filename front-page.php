@@ -12,7 +12,7 @@
 
             <img class="hlobras__item__fi" src="<?php echo $obra->getMainPicture()['sizes']['medium_large']; ?>" srcset="<?php echo wp_get_attachment_image_srcset($obra->getMainPicture()['id']); ?>">
 
-            <div class="hlobras__meta">
+            <div class="hlobras__meta wrapper">
 
                 <h2 class="hlobras__h"><?php echo $obra->getTitle(); ?></h2>
 
@@ -61,7 +61,7 @@
         <p class="bblock__b">Sigue de cerca los espectáculos actualmente en cartel de Avanti Teatro.</p>
 
 
-        <ul class="hpgiras__items owl-carousel">
+        <ul class="hpgiras__items">
         <?php foreach( $obras as $obra ):
         /** @var $obra \MGTC\Models\Obra */
             ?>
@@ -101,12 +101,12 @@
             <div class="hpevents__item__meta">
 
                 <h3 class="hpevents__item__h"><?php echo $gira->getObra()->getTitle(); ?></h3>
-                <p>
+                <p class="hpevents__item__b">
                     <?php
                     $fecha = date_create_from_format( "d/m/Y H:i a", $gira->getDate() );
                     ?>
 
-		            Próximo <b><?php echo $fecha->format('d/m/Y'); ?></b><br>
+		            Próximo <b><?php echo $fecha->format('d/m/Y'); ?></b>
                     <b>a las <?php echo $fecha->format('H:i'); ?></b><br>
 		            <?php echo $gira->getTheatre()->getName(); ?><br>
 		            <b><?php echo $gira->getTheatre()->getCity(); ?></b>
@@ -141,7 +141,7 @@
         <?php
             $actores = \MGTC\Service\Actores::getInstance()->get_actors_for_homepage();
             if( !empty( $actores ) ): ?>
-                <ul class="hpactores__list owl-carousel"">
+                <ul class="hpactores__list">
                     <?php
                     foreach( $actores as $actor ): /* @var $actor \MGTC\Models\Actor */ ?>
                         <li class="hpactores__item">

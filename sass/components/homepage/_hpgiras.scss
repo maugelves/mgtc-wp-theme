@@ -16,8 +16,9 @@
 
 
   .hpgiras__items {
-    @extend .full-width;
-    margin-bottom: 38px;
+    margin: 0 auto 38px;
+    min-width: 350px;
+    max-width: 500px;
   }
 
   .hpgiras__item {
@@ -65,20 +66,16 @@
   }
 
   .hpgiras__items {
-    align-items: stretch;
-    display: flex !important;
-    left: auto;
-    margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    right: auto;
-    width: auto;
+    max-width: none;
   }
 
   .hpgiras__item {
+    border: 0;
     display: block;
+    flex: 0 0 33%;
     padding-bottom: 32px;
   }
+  .hpgiras__item:last-child{border:0;}
 
     .hpgiras__item__h {
       font-size: 35px;

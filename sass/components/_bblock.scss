@@ -24,12 +24,12 @@
   .bblock__l {
     border: 1px solid $highlightColor;
     border-radius: 100px;
-    display: block;
-    @extend .link;
+    display: inline-block;
+    font-family: $secondaryFontFamily;
+    font-size: 14px;
     margin-top: 1.68em;
-    max-width: 260px;
     padding: 10px 20px;
-    margin-left: auto;
+    text-transform: uppercase;
   }
 
 
