@@ -60,3 +60,22 @@
     width: 200px;
     margin: 0 auto;
   }
+
+
+
+@media screen and ( min-width: $sm ) {
+
+  .hpevents__items {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .hpevents__item {
+    margin-right: 2%;
+    width: 49%;
+  }
+
+    .hpevents__item:nth-child(2n+2){ margin-right: 0; }
+
+}

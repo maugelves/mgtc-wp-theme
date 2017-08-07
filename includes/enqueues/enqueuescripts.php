@@ -5,8 +5,8 @@
 function site_scripts() {
 
 	wp_register_script('general', get_bloginfo( 'template_url' ) . "/js/general.js", array('jquery'), false, true);
-	wp_register_script('siema', get_bloginfo('template_url') . '/js/lib/siema.min.js', array(), false, true );
-	wp_register_script('frontpage', get_bloginfo('template_url') . '/js/frontpage.js', array('jquery', 'siema'), false, true);
+	wp_register_script('owl', get_bloginfo('template_url') . '/js/lib/owl.carousel.min.js', array('jquery'), false, true );
+	wp_register_script('frontpage', get_bloginfo('template_url') . '/js/frontpage.js', array('jquery', 'owl'), false, true);
 
 
 	// ENQUEUE

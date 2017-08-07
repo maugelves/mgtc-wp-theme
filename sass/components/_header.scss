@@ -3,15 +3,21 @@
 \*------------------------------------*/
 
 .mastheader {
-  align-items:      center;
+  /*align-items:      center;
   display:          grid;
   grid-template-columns: 70% 20%;
   grid-template-areas: "mhlogo    mhhamb"
                         "mhnav    mhnav";
   justify-content:  space-between;
   padding-top:          0.56em;
-  position:         relative;
+  position:         relative;*/
 }
+
+  .mastheader__wrapper {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+  }
 
 
   .header__logo {

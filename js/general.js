@@ -1,9 +1,7 @@
 jQuery(document).ready(function($){
 
 	general = {
-		headerCarousel: function(){
-			$('.hlobras').siema();
-		},
+
 		init: function(){
 
             $('#header__hamb').click(function(){
@@ -12,6 +10,7 @@ jQuery(document).ready(function($){
             });
 
 		}
+
 	};
 
 	// Initialize the general object

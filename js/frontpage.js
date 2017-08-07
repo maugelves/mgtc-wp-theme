@@ -3,18 +3,53 @@ jQuery(document).ready(function($){
     frontpage = {
         headerCarousel: function(){
 
-            var args = {
-                selector: '.hlobras',
-                duration: 200,
-                easing: 'ease-out',
-                perPage: 1,
-                startIndex: 0,
-                draggable: true,
-                threshold: 20,
-                loop: false
-            };
+            $(".hlobras").owlCarousel({
+                autoplay: false,
+                dots: false,
+                items: 1,
+                loop: true
+            });
 
-            new Siema(args);
+
+            // Initialice Obras en Gira solo si la resolución del
+            // Dispositivo es mayor a 768px
+            if( $(window).width() >= 768 ){
+
+                $(".hpgiras__items").owlCarousel({
+                    autoplay: true,
+                    dots: false,
+                    loop: true,
+                    responsive: {
+                        768: {
+                            items: 2,
+                            margin: 20,
+                        },
+                        1440: {
+                            items: 3,
+                            margin: 40,
+                        }
+                    }
+                });
+
+
+                $(".hpactores__list").owlCarousel({
+                    autoplay: true,
+                    dots: false,
+                    loop: true,
+                    responsive: {
+                        768: {
+                            items: 2,
+                            margin: 20,
+                        },
+                        1440: {
+                            items: 3,
+                            margin: 40,
+                        }
+                    }
+                });
+
+            }
+
         },
         init: function(){
 

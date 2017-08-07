@@ -22,8 +22,29 @@
   }
 
   .bblock__l {
+    border: 1px solid $highlightColor;
+    border-radius: 100px;
     display: block;
     @extend .link;
     margin-top: 1.68em;
-    text-align: right;
+    max-width: 260px;
+    padding: 10px 20px;
+    margin-left: auto;
   }
+
+
+
+@media screen and ( min-width: $sm ) {
+  .bbloc{
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+
+    .bblock__h {
+      font-size: 30px;
+    }
+
+    .bblock__b {
+      font-size: 22px;
+    }
+}

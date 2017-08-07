@@ -12,9 +12,18 @@
   position: relative;
 }
 
-  .hlobras__item > * {
-    position: relative;
-    z-index: 100;
+  .hlobras__item__fi {
+    object-fit: cover;
+    height: 100%;
+    object-position: center center;
+  }
+
+  .hlobras__meta {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    z-index: 200;
+    transform: translateY(-50%);
   }
 
   .hlobras__h {
@@ -42,3 +51,19 @@
 
 
 
+@media screen and (min-width: $sm) {
+
+  .hlobras__item {
+
+    height: 400px;
+  }
+
+}
+
+
+
+@media screen and ( min-width: $lg ) {
+  .hlobras__item {
+    height: 500px;
+  }
+}

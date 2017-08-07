@@ -3,20 +3,31 @@
 <?php
     $obras = \MGTC\Service\Obras::getInstance()->get_active_obras();
     if( !empty($obras) ): ?>
-<section class="hlobras">
+<section class="hlobras owl-carousel">
 
-    <?php foreach( $obras as $obra ): ?>
+    <?php foreach( $obras as $obra ): /** @var $obra \MGTC\Models\Obra */?>
 
         <?php if( $obra->getMainPicture()  ): ?>
-        <div class="hlobras__item" style="background-image: url(<?php echo $obra->getMainPicture()['sizes']['medium_large']; ?>); background-position: center center;">
+        <div class="hlobras__item" >
 
-            <h2 class="hlobras__h"><?php echo $obra->getTitle(); ?></h2>
+            <img class="hlobras__item__fi" src="<?php echo $obra->getMainPicture()['sizes']['medium_large']; ?>" srcset="<?php echo wp_get_attachment_image_srcset($obra->getMainPicture()['id']); ?>">
 
-            <?php if( !empty( $obra->getSubtitle() ) ): ?>
-                <p class="hlobras__sh"><?php echo $obra->getSubtitle(); ?></p>
-            <?php endif; ?>
+            <div class="hlobras__meta">
 
-            <a class="btn--primary" href="#" type="button">Ir a la obra</a>
+                <h2 class="hlobras__h"><?php echo $obra->getTitle(); ?></h2>
+
+	            <?php if( !empty( $obra->getSubtitle() ) ): ?>
+                    <p class="hlobras__sh"><?php echo $obra->getSubtitle(); ?></p>
+	            <?php endif; ?>
+
+                <a class="btn--primary" href="#" type="button">Ir a la obra</a>
+
+	            <?php
+	            /*style="background-image: url(<?php echo $obra->getMainPicture()['sizes']['medium_large']; ?>); background-position: center center;"*/
+	            ?>
+
+            </div>
+
 
         </div>
         <?php endif; ?>
@@ -50,24 +61,21 @@
         <p class="bblock__b">Sigue de cerca los espectáculos actualmente en cartel de Avanti Teatro.</p>
 
 
-        <ul class="hpgiras__items">
-        <?php foreach( $obras as $obra ): ?>
+        <ul class="hpgiras__items owl-carousel">
+        <?php foreach( $obras as $obra ):
+        /** @var $obra \MGTC\Models\Obra */
+            ?>
             <li class="hpgiras__item">
 	            <?php echo get_the_post_thumbnail( $obra->getId(), 'post-thumbnail', ['class' => 'hpgiras__item__fi'] ); ?>
                 <h2 class="hpgiras__item__h"><?php echo $obra->getTitle(); ?></h2>
-
-                <?php
-                    // Show the "Entradas" button only if the obra has Gira posts
-                    if( count( $obra->getGiras() ) > 0 ): ?>
-                        <a class="hpgiras__item__ticket" href="<?php the_permalink( $obra->getID() ); ?>" class="btn--secondary">Entradas</a>
-                    <?php endif; ?>
-
+                <p class="hpgiras__item__b"><?php echo $obra->getShortDescription(); ?></p>
+                <a class="hpgiras__item__l" href="<?php the_permalink( $obra->getID() ); ?>" class="btn--secondary">+ Info</a>
             </li>
         <?php endforeach; ?>
         </ul>
 
-        <a class="btn--secondary" href="#">Ver espectáculos en gira</a>
-
+        <a class="btn--secondary hpgiras__l" href="#">Ver espectáculos en gira</a>
+        
     </div>
 
 </section><!-- END .hpgiras -->
@@ -133,7 +141,7 @@
         <?php
             $actores = \MGTC\Service\Actores::getInstance()->get_actors_for_homepage();
             if( !empty( $actores ) ): ?>
-                <ul class="hpactores__list">
+                <ul class="hpactores__list owl-carousel"">
                     <?php
                     foreach( $actores as $actor ): /* @var $actor \MGTC\Models\Actor */ ?>
                         <li class="hpactores__item">

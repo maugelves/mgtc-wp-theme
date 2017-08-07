@@ -11,13 +11,13 @@
 
 
   .hpactores__list {
-    background-color: $baseLightColor;
     margin-bottom: 38px;
     margin-top: 44px;
   }
 
   .hpactores__item {
     align-items: center;
+    background-color: $baseLightColor;
     border-top: 1px solid #D1D1D1;
     display: flex;
   }
@@ -38,3 +38,29 @@
     font-size: 18px;
     margin: 0;
   }
+
+
+
+@media screen and ( min-width: $sm ) {
+
+  .hpactores__list {}
+
+
+    .hpactores__item {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .hpactores__item__fi {
+      height: 233px;
+      object-fit: cover;
+      margin-right: 0;
+      width: 350px;
+    }
+
+    .hpactores__item__h {
+      font-size: 28px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+}
