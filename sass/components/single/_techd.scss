@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    # Single Technical Details
+\*------------------------------------*/
+.sgtechd {
+  background-color: #F5F5F5;
+  font-size: 15px;
+  font-weight: 300;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+  .sgtechd__h {
+    font-size: 20px;
+    margin-bottom: 31px;
+  }
+
+
+  .sgtechd__item {
+    border-bottom: 1px solid #D1D1D1;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .sgtechd__item__h {
+    font-family: $mainFontFamily;
+    font-weight: 400;
+  }
+
+  .sgtechd__item__b { margin: 0; }

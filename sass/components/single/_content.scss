@@ -5,6 +5,7 @@
 .sgcontent {
   font-weight: 300;
   font-size: 15px;
+  line-height: 20px;
   padding-bottom: 26px;
   padding-top: 26px;
 }
@@ -13,3 +14,42 @@
     font-size: 20px;
     margin-bottom: 20px;
   }
+
+
+
+
+@media screen and ( min-width: $sm ) {
+
+  .sgcontent {
+    font-size: 17px;
+    line-height: 24px;
+    padding-bottom: 38px;
+    padding-top: 38px;
+  }
+
+  .sgcontent__h {
+    font-size: 25px;
+  }
+
+}
+
+
+
+
+
+@media screen and ( min-width: $lg ) {
+
+  .sgcontent__wrapper { max-width: 780px; }
+
+  .sgcontent {
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+
+  .sgcontent__h {
+    font-size: 30px;
+  }
+
+}

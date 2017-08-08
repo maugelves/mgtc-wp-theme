@@ -5,14 +5,11 @@
 .sgcta {
 
   border-bottom: 1px solid #D1D1D1;
+  padding-bottom: 28px;
+  padding-top: 28px;
   width: 100%;
 
 }
-
-  .sgcta__wrapper {
-    padding-bottom: 28px;
-    padding-top: 28px;
-  }
 
   .sgcta__h {
     font-size: 18px;
@@ -31,7 +28,7 @@
 
 @media screen and ( min-width: $sm ) {
 
-  .sgcta__wrapper {
+  .sgcta {
     padding-bottom: 39px;
     padding-top: 39px;
   }
@@ -52,9 +49,9 @@
 
 @media screen and ( min-width: $lg ) {
 
-  .sgcta__wrapper {
-    padding-bottom: 39px;
-    padding-top: 39px;
+  .sgcta {
+    padding-bottom: 50px;
+    padding-top: 50px;
   }
 
     .sgcta__h {
