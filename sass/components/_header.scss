@@ -3,7 +3,10 @@
 \*------------------------------------*/
 
 .mastheader {
-
+  align-items: center;
+  display: flex;
+  padding-bottom: 9px;
+  padding-top: 9px;
 }
 
   .mastheader__wrapper {
@@ -36,7 +39,7 @@
       display: none;
       width: 100vw;
       position: absolute;
-      top: 39px;
+      top: 56px;
       z-index: 250;
       left: 0;
     }
@@ -53,3 +56,45 @@
           color:          #474747;
           text-transform: uppercase;
         }
+
+
+@media screen and (min-width: $sm) {
+
+  #header__hamb {
+    display: none;
+  }
+
+  .header__nav {
+    background-color: transparent;
+    display: block;
+    position: relative;
+    top: auto;
+    width: auto;
+  }
+
+  #menu-basic-links {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__nav .menu-item {
+    border: 0;
+    display: flex;
+    margin-right: 20px;
+    padding: 0;
+  }
+
+    .header__nav .menu-item:last-child { margin-right: 0; }
+
+  .header__nav .menu-item a {
+    color: $baseLightColor;
+    font-family: $secondaryFontFamily;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: 0.5s color;
+  }
+
+    .header__nav .menu-item a:hover { color: $highlightColor; }
+
+}
