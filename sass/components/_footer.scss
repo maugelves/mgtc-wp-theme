@@ -45,6 +45,7 @@ $footer_widgets_txtcolor: #D1D1D1;
 
 .mastfooter__cols {
   background-color: $footer_widgets_bckcolor;
+  display: none;
 
 
   h1, h2, h3, h4, h5, h6, a, strong, b {
@@ -110,6 +111,8 @@ $footer_widgets_txtcolor: #D1D1D1;
     border-bottom: 1px solid #979797;
     max-width: $sm;
   }
+
+  .mastfooter__cols { display: block; }
 }
 
 

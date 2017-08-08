@@ -3,18 +3,21 @@
 \*------------------------------------*/
 .wrapper {
   margin: 0 auto;
-  width: 84.06%;
+  max-width: $xs;
+  width: $xs-width;
 }
 
 
 @media screen and ( min-width: $sm ){
   .wrapper {
     max-width: $sm;
+    width: $sm-width;
   }
 }
 
 @media screen and ( min-width: $lg ){
   .wrapper {
     max-width: $lg;
+    width: $lg-width;
   }
 }

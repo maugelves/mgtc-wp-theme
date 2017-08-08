@@ -10,12 +10,8 @@
 }
 
   .sgcta__wrapper {
-    margin: 0 auto;
-    max-width: $xs;
     padding-bottom: 28px;
     padding-top: 28px;
-    position: relative;
-    width: $xs-width;
   }
 
   .sgcta__h {
@@ -25,6 +21,7 @@
 
   .sgcta__b {
     font-size: 15px;
+    font-weight: 300;
     line-height: 20px;
     margin-bottom: 28px;
   }
@@ -33,12 +30,10 @@
 
 
 @media screen and ( min-width: $sm ) {
-  
+
   .sgcta__wrapper {
-    max-width: $sm;
     padding-bottom: 39px;
     padding-top: 39px;
-    width: $sm-width;
   }
 
     .sgcta__h {
@@ -58,10 +53,8 @@
 @media screen and ( min-width: $lg ) {
 
   .sgcta__wrapper {
-    max-width: $lg;
     padding-bottom: 39px;
     padding-top: 39px;
-    width: $lg-width;
   }
 
     .sgcta__h {

@@ -19,9 +19,11 @@
 </section>
 
 
+
+
 <section class="sgcta">
 
-    <div class="sgcta__wrapper">
+    <div class="sgcta__wrapper wrapper">
 
         <h2 class="sgcta__h">Sobre "<?php echo $obra->getTitle(); ?>"</h2>
         <p class="sgcta__b"><?php echo $obra->getShortDescription(); ?></p>
@@ -29,6 +31,21 @@
         <div class="linkcontainer">
             <a href="#" class="link-right">Consultar la gira <span class="icon-tc-link"></span></a>
         </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section class="sgcontent">
+
+    <div class="sgcontent__wrapper wrapper">
+
+        <h2 class="sgcontent__h">Descripción</h2>
+        <?php echo $obra->getDescription(); ?>
 
     </div>
 
