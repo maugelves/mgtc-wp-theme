@@ -126,6 +126,30 @@
 
 
 
+
+	        <?php // DIRECTORS ?>
+	        <?php if( !empty( $obra->getDirectors() ) ): ?>
+                <li class="sgtechd__item">
+                    <h3 class="sgtechd__item__h">Director(es):</h3>
+                    <p class="sgtechd__item__b">
+	                    <?php
+	                    // RENDER THE DIRECTORS
+	                    $countDirectors = count( $obra->getDirectors() );
+	                    $i = 1;
+	                    foreach( $obra->getDirectors() as $director ): /** @var $director \MGTC\Models\Equipo */ ?>
+
+		                    <?php
+		                    // Print the comma in the link?
+		                    $nombre = ( $countDirectors != $i ) ? $director->getNombre() . ", " : $director->getNombre(); ?>
+		                    <?php echo $nombre; ?>
+		                    <?php $i++; ?>
+
+	                    <?php endforeach; ?>
+                    </p>
+                </li>
+	        <?php endif; ?>
+
+
         </ul>
     </div>
 
