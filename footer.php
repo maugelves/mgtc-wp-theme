@@ -38,10 +38,19 @@ $header_text_hover_color = get_theme_mod('mgtc_footer_text_hover_color_sett' ); 
 
 			<div class="copyright">
 
-                <div class="wrapper">
+                <div class="wrapper copyright__wrapper">
 
-                    <p>Copyright ©<?php echo date('Y'); ?> Avanti Teatro. Todos los derechos reservados. </p>
-                    <p><?php echo sprintf( __('Sitio web desarrollado por %s', 'mgtc'), '<a class="copyright__a" href="https://maugelves.com">maugelves.com</a>' );  ?></p>
+                    <div class="createdby">
+                        <p>Copyright ©<?php echo date('Y'); ?> Avanti Teatro. Todos los derechos reservados. </p>
+                        <p><?php echo sprintf( __('Sitio web desarrollado por %s', 'mgtc'), '<a class="copyright__a" href="https://maugelves.com">maugelves.com</a>' );  ?></p>
+                    </div>
+
+
+                    <?php if( function_exists('mg_social_links') ): ?>
+                    <div class="rrss">
+                        <?php mg_social_links(); ?>
+                    </div>
+                    <?php endif; ?>
 
                 </div>
 
