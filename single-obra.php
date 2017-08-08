@@ -19,5 +19,15 @@
 </section>
 
 
+<section class="sgcta">
+    
+    <h2 class="sgcta__h">Sobre "<?php echo $obra->getTitle(); ?>"</h2>
+    <p class="sgcta__b"><?php echo $obra->getShortDescription(); ?></p>
+    <div class="linkcontainer">
+        <a href="#" class="link-right">Consultar la gira <span class="icon-tc-link"></span></a>
+    </div>
+
+</section>
+
 
 <?php get_footer(); ?>

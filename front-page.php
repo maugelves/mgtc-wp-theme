@@ -22,10 +22,6 @@
 
                 <a class="btn--primary" href="<?php echo get_permalink( $obra->getID() ); ?>" type="button">Ir a la obra</a>
 
-	            <?php
-	            /*style="background-image: url(<?php echo $obra->getMainPicture()['sizes']['medium_large']; ?>); background-position: center center;"*/
-	            ?>
-
             </div>
 
 
@@ -45,7 +41,11 @@
 
     <h3 class="bblock__h">Somos la Compañía de <span>Teatro Avanti</span></h3>
     <p class="bblock__b">Creemos en un teatro sin artificio donde la palabra y la interpretación propongan una serie de interrogantes que inviten al espectador a la reflexión.</p>
-    <a class="bblock__l" href="#">Conócenos más a fondo <span class="icon-tc-link"></span></a>
+
+    <div class="linkcontainer">
+        <a class="link-right" href="#">Conócenos más a fondo <span class="icon-tc-link"></span></a>
+    </div>
+
 
 </section><!-- END .bblock -->
 

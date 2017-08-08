@@ -1,0 +1,62 @@
+/*------------------------------------*\
+    # Single Call To Action
+\*------------------------------------*/
+
+.sgcta {
+  margin: 0 auto;
+  max-width: $xs;
+  padding-bottom: 28px;
+  padding-top: 28px;
+  width: $xs-width;
+}
+
+  .sgcta__h {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .sgcta__b {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 28px;
+  }
+
+
+
+
+@media screen and ( min-width: $sm ) {
+  .sgcta {
+    max-width: $sm;
+    padding-bottom: 39px;
+    padding-top: 39px;
+    width: $sm-width;
+  }
+
+    .sgcta__h {
+      font-size: 25px;
+    }
+
+    .sgcta__b {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 35px;
+    }
+
+}
+
+
+
+@media screen and ( min-width: $lg ) {
+
+  .sgcta {
+    max-width: $lg;
+    padding-bottom: 39px;
+    padding-top: 39px;
+    width: $lg-width;
+  }
+
+    .sgcta__h {
+      font-size: 30px;
+    }
+
+}

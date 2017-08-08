@@ -27,15 +27,54 @@
 
 
 .link {
-  align-items: baseline;
-  display: flex;
+  border: 2px solid $highlightColor;
+  border-radius: 100px;
+  display: inline-block;
   font-family: $secondaryFontFamily;
-  font-size: 1.12rem;
+  font-size: 14px;
+  padding: 5px 20px;
+  text-align: center;
   text-transform: uppercase;
 }
+
+  .link-left {
+    @extend .link;
+  }
+
+  .link-right {
+    @extend .link;
+    float: right;
+  }
+
+  .linkcontainer {
+    height: 35px;
+    width: 100%;
+  }
 
   .link .icon-tc-link {
     display: inline-block;
     font-size: 0.75em;
     margin-left: 0.81em;
   }
+
+
+
+@media screen and ( min-width: $sm ) {
+
+  .link {
+    font-size: 16px;
+    padding: 8px 22px;
+  }
+
+}
+
+
+
+@media screen and ( min-width: $lg ) {
+
+  .link {
+    font-size: 18px;
+    padding: 10px 25px;
+  }
+
+}
