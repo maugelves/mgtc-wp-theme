@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    # Single Head
+\*------------------------------------*/
+.sgheader {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+  .sgheader::after {
+    background-color: rgba( 71,71,71, 0.5 );
+    content: " ";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .sgheader__fi {
+    object-fit: cover;
+    object-position: center center;
+    font-family: "object-fit:cover; object-position:center center;";
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .sgheader__meta {
+    color: $baseLightColor;
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 50;
+  }
+
+
+  .sgheader__h {
+    color: $baseLightColor;
+    font-size: 36px;
+  }
+
+
+
+
+@media screen and ( min-width: $lg ) {
+
+  .sgheader__meta {
+    left: 50%;
+    margin: 0 auto 0 84px ;
+    max-width: $lg;
+    text-align: left;
+    transform: translateY(-50%) translateX(-50%);
+    width: $lgwidth;
+  }
+  .sgheader__h { font-size: 48px; }
+  .sgheader__sh { font-size: 24px; }
+
+}

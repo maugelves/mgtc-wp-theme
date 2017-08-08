@@ -20,7 +20,7 @@
                     <p class="hlobras__sh"><?php echo $obra->getSubtitle(); ?></p>
 	            <?php endif; ?>
 
-                <a class="btn--primary" href="#" type="button">Ir a la obra</a>
+                <a class="btn--primary" href="<?php echo get_permalink( $obra->getID() ); ?>" type="button">Ir a la obra</a>
 
 	            <?php
 	            /*style="background-image: url(<?php echo $obra->getMainPicture()['sizes']['medium_large']; ?>); background-position: center center;"*/

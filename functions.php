@@ -49,3 +49,15 @@ foreach (glob(__DIR__ . "/includes/cpts/*.php") as $filename)
 */
 foreach (glob(__DIR__ . "/includes/libs/*.php") as $filename)
 	include $filename;
+
+
+
+
+
+/*
+*   =================================================================================================
+*   HOOKS
+*   =================================================================================================
+*/
+foreach (glob(__DIR__ . "/includes/hooks/*.php") as $filename)
+	include $filename;
