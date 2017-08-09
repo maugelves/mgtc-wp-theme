@@ -80,6 +80,28 @@
 
 
 
+<section class="sgembeds">
+
+    <div class="wrapper">
+
+        <h2 class="sggallery__h">Galería de Videos</h2>
+
+        <?php if ( have_rows('mgtc_videos_obra', $obra->getID() ) ): ?>
+
+            <?php while( have_rows( 'mgtc_videos_obra', $obra->getID() ) ): the_row(); ?>
+                <div class="video-container">
+                    <?php the_sub_field('mgtc_video_obra'); ?>
+                </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
+
+    </div>
+
+</section>
+
+
+
+
 
 <section class="sgtechd">
 
