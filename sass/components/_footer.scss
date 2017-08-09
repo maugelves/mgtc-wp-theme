@@ -124,6 +124,17 @@ $footer_widgets_txtcolor: #D1D1D1;
 
   .mfmenu .menu-item { margin-right: 30px; }
 
+
+  .mastfooter__cols__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mastfooter__col {
+    flex: 0 0 31%;
+    padding-top: 30px;
+  }
+
+
   .copyright {
     padding-bottom: 18px;
     padding-top: 18px;

@@ -18,7 +18,7 @@ $header_text_hover_color = get_theme_mod('mgtc_footer_text_hover_color_sett' ); 
 
 			<div class="mastfooter__cols">
 
-                <div class="wrapper">
+                <div class="wrapper mastfooter__cols__wrapper">
 
                     <ul class="mastfooter__col">
                         <?php dynamic_sidebar('mgtc-footer-column-1'); ?>
