@@ -15,7 +15,7 @@ function site_styles() {
 	wp_enqueue_style('style');
 
 	// Owl Carousel
-	if( is_front_page() ):
+	if( is_singular() ):
 		wp_enqueue_style('owl' );
 	endif;
 }

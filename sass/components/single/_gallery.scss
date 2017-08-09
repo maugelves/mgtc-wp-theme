@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    # Single Galleries
+\*------------------------------------*/
+.sggallery {
+
+}
+
+.sggallery__h {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sggallery__wrapper {
+    height: 300px;
+}
+
+.owl-item > .sgallery__item {
+  object-fit: cover;
+  object-position: center center;
+  height:285px;
+  width:100%;
+}

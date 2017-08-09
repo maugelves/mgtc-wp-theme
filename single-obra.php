@@ -53,6 +53,34 @@
 
 
 
+
+
+
+<section class="sggallery">
+
+    <div class="wrapper">
+
+        <h2 class="sggallery__h">Galería de fotos</h2>
+
+        <div class="sggallery__wrapper owl-carousel">
+
+            <?php
+            $images = get_field('mgtc_imagenes_obra', $obra->getID() );
+            foreach( $images as $image ): ?>
+                <img class="sgallery__item" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'] ); ?>">
+            <?php endforeach; ?>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
 <section class="sgtechd">
 
     <div class="sgcontent__wrapper wrapper">
