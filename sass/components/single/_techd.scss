@@ -70,3 +70,42 @@
     }
     .sgtechd__sponsors__item:nth-child(3n+3) { margin-right: 0; }
     .sgtechd__sponsors__item:nth-last-child(-n+3) { margin-bottom: 0; }
+
+
+@media screen and (min-width: $sm){
+  .sgtechd {
+    font-size: 17px;
+  }
+
+    .sgtechd__item {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .sgtechd__item__h{ flex: 0 0 40%; }
+    .sgtechd__item__b{ flex-grow: 1; }
+
+    .sgtechd__persons { padding-top: 0; }
+}
+
+
+
+
+@media screen and ( min-width: $lg ) {
+
+  .sgtechd {
+    background-color: transparent;
+    border-bottom: 1px solid #D1D1D1;
+  }
+
+    .sgtechd__wrappper {
+      background-color: #F5F5F5;
+      padding: 40px 50px;
+    }
+
+    .sgtechd__h {
+      font-size: 30px;
+      margin-bottom: 24px;
+    }
+
+}

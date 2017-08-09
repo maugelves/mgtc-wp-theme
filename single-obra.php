@@ -58,7 +58,7 @@
 
 <section class="sggallery">
 
-    <div class="wrapper">
+    <div class="wrapper sgcontent__wrapper">
 
         <h2 class="sggallery__h">Galería de fotos</h2>
 
@@ -82,7 +82,7 @@
 
 <section class="sgembeds">
 
-    <div class="wrapper">
+    <div class="wrapper sgcontent__wrapper">
 
         <h2 class="sggallery__h">Galería de Videos</h2>
 
@@ -105,7 +105,7 @@
 
 <section class="sgtechd">
 
-    <div class="sgcontent__wrapper wrapper">
+    <div class="sgcontent__wrapper sgtechd__wrappper wrapper">
 
         <h2 class="sgtechd__h">Ficha Técnica</h2>
 
