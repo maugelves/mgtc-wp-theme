@@ -26,4 +26,22 @@
     font-weight: 400;
   }
 
-  .sgtechd__item__b { margin: 0; }
+  .sgtechd__item__b,
+  .sgtechd__item__b > p { margin: 0; }
+  .sgtechd__item__b > p > strong { font-weight: 400; }
+
+
+  .sgtechd__person {
+    margin-bottom: 10px;
+  }
+  .sgtechd__person__name {
+    display: inline-block;
+    font-weight: 400;
+    margin-right: 5px;
+  }
+  .sgtechd__person__name::after { content: ":"; }
+
+  .sgtechd__person > a {
+    display: block;
+  }
+    .sgtechd__person > a:last-child { margin-right: 0; }

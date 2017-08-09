@@ -150,6 +150,66 @@
 	        <?php endif; ?>
 
 
+
+
+
+	        <?php // TECHNICAL AND ARTISTIC TEAM ?>
+	        <?php if( !empty( $obra->getTeam() ) ): ?>
+                <li class="sgtechd__item">
+                    <h3 class="sgtechd__item__h">Equipo artístico, técnico, y productivo:</h3>
+                    <div class="sgtechd__item__b"><?php echo $obra->getTeam(); ?></div>
+                </li>
+	        <?php endif; ?>
+
+
+
+
+
+
+	        <?php // DISTRIBUTION ?>
+	        <?php if( !empty( $obra->getDistributors() ) ): ?>
+                <li class="sgtechd__item">
+                    <h3 class="sgtechd__item__h">Distribuidor(es):</h3>
+
+				        <?php
+				        // RENDER THE DISTRIBUTORS
+				        foreach( $obra->getDistributors() as $distributor ): /** @var $distributor \MGTC\Models\Equipo */ ?>
+
+                            <p class="sgtechd__item__b sgtechd__person">
+
+                                <span class="sgtechd__person__name"><?php echo $distributor->getNombre(); ?></span>
+
+	                            <?php if( !empty ( $distributor->getEmail() ) ): ?>
+                                    <a target="_blank" href="mailto:<?php echo $distributor->getEmail(); ?>"><span class="icon-envelope"></span> <?php echo $distributor->getEmail(); ?></a>
+	                            <?php endif; ?>
+
+	                            <?php
+                                if( !empty ( $distributor->getTelefonos() ) ):
+                                   foreach ( $distributor->getTelefonos() as $telefono ): ?>
+                                    <a target="_blank" href="tel: <?php echo $telefono; ?>"><span class="icon-mobile"></span> <?php echo $telefono; ?></a>
+                                   <?php endforeach; ?>
+	                            <?php endif; ?>
+
+	                            <?php if( !empty ( $distributor->getFacebook() ) ): ?>
+                                    <a target="_blank" href="<?php echo $distributor->getFacebook(); ?>"><span class="icon-facebook"></span> <?php echo $distributor->getFacebook(); ?></a>
+	                            <?php endif; ?>
+
+	                            <?php if( !empty ( $distributor->getInstagram() ) ): ?>
+                                    <a target="_blank" href="https://instagram.com/<?php echo $distributor->getInstagram(); ?>"><span class="icon-instagram"></span> @<?php echo $distributor->getInstagram(); ?></a>
+	                            <?php endif; ?>
+
+	                            <?php if( !empty ( $distributor->getTwitter() ) ): ?>
+                                    <a target="_blank" href="https://twitter.com/<?php echo $distributor->getTwitter(); ?>"><span class="icon-twitter"></span> @<?php echo $distributor->getTwitter(); ?></a>
+	                            <?php endif; ?>
+
+                            </p>
+
+				        <?php endforeach; ?>
+
+                </li>
+	        <?php endif; ?>
+
+
         </ul>
     </div>
 
