@@ -281,7 +281,7 @@
 				        <?php endforeach; ?>
 
 	                    <?php
-	                    // RENDER THE PRESS LINKS
+	                    // RENDER THE PRESS FILES
 	                    foreach( $obra->getPressFiles() as $presslink ): ?>
                             <li><span class="icon-file-zip-o"></span> <a href="<?php echo $presslink['link']; ?>"> <?php echo $presslink['name']; ?></a></li>
 	                    <?php endforeach; ?>
@@ -289,6 +289,27 @@
                     </ul>
                 </li>
 	        <?php endif; ?>
+
+
+
+
+
+	        <?php // DOWNLOAD ?>
+	        <?php if( !empty( $obra->getDownloads() ) ): ?>
+                <li class="sgtechd__item">
+                    <h3 class="sgtechd__item__h">Descargas:</h3>
+                    <ul class="sgtechd__item__b">
+
+				        <?php
+				        // RENDER THE PRESS LINKS
+				        foreach( $obra->getDownloads() as $download ): ?>
+                            <li><span class="icon-file-zip-o"></span> <a href="<?php echo $download['link']; ?>"> <?php echo $download['name']; ?></a></li>
+				        <?php endforeach; ?>
+
+                    </ul>
+                </li>
+	        <?php endif; ?>
+
         </ul>
     </div>
 
