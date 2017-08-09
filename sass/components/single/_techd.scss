@@ -24,6 +24,7 @@
   .sgtechd__item__h {
     font-family: $mainFontFamily;
     font-weight: 400;
+    margin-bottom: 10px;
   }
 
   .sgtechd__item__b,
@@ -31,17 +32,24 @@
   .sgtechd__item__b > p > strong { font-weight: 400; }
 
 
+  .sgtechd__persons {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
   .sgtechd__person {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
-  .sgtechd__person__name {
-    display: inline-block;
-    font-weight: 400;
-    margin-right: 5px;
-  }
-  .sgtechd__person__name::after { content: ":"; }
+    .sgtechd__person:last-child{ margin-bottom: 0; }
 
-  .sgtechd__person > a {
+  .sgtechd__person__name {
     display: block;
+    font-weight: 400;
+    margin-bottom: 5px;
   }
-    .sgtechd__person > a:last-child { margin-right: 0; }
+
+  .sgtechd__item__b [class^="icon-"] {
+    display: inline-block;
+    margin-right: 15px;
+    text-align: center;
+    width: 15px;
+  }

@@ -170,46 +170,125 @@
 	        <?php if( !empty( $obra->getDistributors() ) ): ?>
                 <li class="sgtechd__item">
                     <h3 class="sgtechd__item__h">Distribuidor(es):</h3>
-
+                    <ul class="sgtechd__persons">
 				        <?php
 				        // RENDER THE DISTRIBUTORS
-				        foreach( $obra->getDistributors() as $distributor ): /** @var $distributor \MGTC\Models\Equipo */ ?>
+				        foreach( $obra->getDistributors() as $prensa ): /** @var $prensa \MGTC\Models\Equipo */ ?>
 
-                            <p class="sgtechd__item__b sgtechd__person">
+                            <li class="sgtechd__item__b sgtechd__person">
 
-                                <span class="sgtechd__person__name"><?php echo $distributor->getNombre(); ?></span>
+                                <span class="sgtechd__person__name"><?php echo $prensa->getNombre(); ?></span>
 
-	                            <?php if( !empty ( $distributor->getEmail() ) ): ?>
-                                    <a target="_blank" href="mailto:<?php echo $distributor->getEmail(); ?>"><span class="icon-envelope"></span> <?php echo $distributor->getEmail(); ?></a>
+	                            <?php if( !empty ( $prensa->getEmail() ) ): ?>
+                                    <p><span class="icon-envelope"></span> <a target="_blank" href="mailto:<?php echo $prensa->getEmail(); ?>"><?php echo $prensa->getEmail(); ?></a></p>
 	                            <?php endif; ?>
 
 	                            <?php
-                                if( !empty ( $distributor->getTelefonos() ) ):
-                                   foreach ( $distributor->getTelefonos() as $telefono ): ?>
-                                    <a target="_blank" href="tel: <?php echo $telefono; ?>"><span class="icon-mobile"></span> <?php echo $telefono; ?></a>
+                                if( !empty ( $prensa->getTelefonos() ) ):
+                                   foreach ( $prensa->getTelefonos() as $telefono ): ?>
+                                    <p><span class="icon-mobile"></span> <a target="_blank" href="tel: <?php echo $telefono; ?>"><?php echo $telefono; ?></a></p>
                                    <?php endforeach; ?>
 	                            <?php endif; ?>
 
-	                            <?php if( !empty ( $distributor->getFacebook() ) ): ?>
-                                    <a target="_blank" href="<?php echo $distributor->getFacebook(); ?>"><span class="icon-facebook"></span> <?php echo $distributor->getFacebook(); ?></a>
+	                            <?php if( !empty ( $prensa->getFacebook() ) ): ?>
+                                    <p><span class="icon-facebook"></span> <a target="_blank" href="<?php echo $prensa->getFacebook(); ?>"><?php echo $prensa->getFacebook(); ?></a></p>
 	                            <?php endif; ?>
 
-	                            <?php if( !empty ( $distributor->getInstagram() ) ): ?>
-                                    <a target="_blank" href="https://instagram.com/<?php echo $distributor->getInstagram(); ?>"><span class="icon-instagram"></span> @<?php echo $distributor->getInstagram(); ?></a>
+	                            <?php if( !empty ( $prensa->getInstagram() ) ): ?>
+                                    <p><span class="icon-instagram"></span> <a target="_blank" href="https://instagram.com/<?php echo $prensa->getInstagram(); ?>">@<?php echo $prensa->getInstagram(); ?></a></p>
 	                            <?php endif; ?>
 
-	                            <?php if( !empty ( $distributor->getTwitter() ) ): ?>
-                                    <a target="_blank" href="https://twitter.com/<?php echo $distributor->getTwitter(); ?>"><span class="icon-twitter"></span> @<?php echo $distributor->getTwitter(); ?></a>
+	                            <?php if( !empty ( $prensa->getTwitter() ) ): ?>
+                                    <p><span class="icon-twitter"></span> <a target="_blank" href="https://twitter.com/<?php echo $prensa->getTwitter(); ?>">@<?php echo $prensa->getTwitter(); ?></a></p>
 	                            <?php endif; ?>
 
-                            </p>
+                            </li>
 
 				        <?php endforeach; ?>
-
+                    </ul>
                 </li>
 	        <?php endif; ?>
 
 
+
+
+
+
+	        <?php // PRESS ?>
+	        <?php if( !empty( $obra->getPressers() ) ): ?>
+                <li class="sgtechd__item">
+                    <h3 class="sgtechd__item__h">Prensa:</h3>
+
+                    <ul class="sgtechd__persons">
+			        <?php
+			        // RENDER THE PRESSERS
+			        foreach( $obra->getPressers() as $prensa ): /** @var $prensa \MGTC\Models\Equipo */ ?>
+
+                        <li class="sgtechd__item__b sgtechd__person">
+                            <span class="sgtechd__person__name"><?php echo $prensa->getNombre(); ?></span>
+
+					        <?php if( !empty ( $prensa->getEmail() ) ): ?>
+                                <p><span class="icon-envelope"></span> <a target="_blank" href="mailto:<?php echo $prensa->getEmail(); ?>"><?php echo $prensa->getEmail(); ?></a></p>
+					        <?php endif; ?>
+
+
+					        <?php
+					        if( !empty ( $prensa->getTelefonos() ) ):
+						        foreach ( $prensa->getTelefonos() as $telefono ): ?>
+                                    <p><span class="icon-mobile"></span> <a target="_blank" href="tel: <?php echo $telefono; ?>"><?php echo $telefono; ?></a></p>
+						        <?php endforeach; ?>
+					        <?php endif; ?>
+
+
+					        <?php if( !empty ( $prensa->getFacebook() ) ): ?>
+                                <p><span class="icon-facebook"></span> <a target="_blank" href="<?php echo $prensa->getFacebook(); ?>"><?php echo $prensa->getFacebook(); ?></a></p>
+					        <?php endif; ?>
+
+					        <?php if( !empty ( $prensa->getInstagram() ) ): ?>
+                                <p><span class="icon-instagram"></span> <a target="_blank" href="https://instagram.com/<?php echo $prensa->getInstagram(); ?>">@<?php echo $prensa->getInstagram(); ?></a></p>
+					        <?php endif; ?>
+
+					        <?php if( !empty ( $prensa->getTwitter() ) ): ?>
+                                <p><span class="icon-twitter"></span> <a target="_blank" href="https://twitter.com/<?php echo $prensa->getTwitter(); ?>">@<?php echo $prensa->getTwitter(); ?></a></p>
+					        <?php endif; ?>
+
+                        </li>
+
+			        <?php endforeach; ?>
+                    </ul>
+                </li>
+	        <?php endif; ?>
+
+
+
+
+
+
+	        <?php // PRESS ARTICLES ?>
+	        <?php if(
+	                !empty( $obra->getPressLinks() )
+                    ||
+	                !empty( $obra->getPressFiles() )
+                    ): ?>
+                <li class="sgtechd__item">
+                    <h3 class="sgtechd__item__h">Enlaces de prensa:</h3>
+                    <ul class="sgtechd__item__b">
+
+				        <?php
+				        // RENDER THE PRESS LINKS
+				        foreach( $obra->getPressLinks() as $presslink ): ?>
+                            <li><span class="icon-globe"></span> <a href="<?php echo $presslink['link']; ?>"> <?php echo $presslink['name']; ?></a></li>
+				        <?php endforeach; ?>
+
+	                    <?php
+	                    // RENDER THE PRESS LINKS
+	                    foreach( $obra->getPressFiles() as $presslink ): ?>
+                            <li><span class="icon-file-zip-o"></span> <a href="<?php echo $presslink['link']; ?>"> <?php echo $presslink['name']; ?></a></li>
+	                    <?php endforeach; ?>
+
+                    </ul>
+                </li>
+	        <?php endif; ?>
         </ul>
     </div>
 
