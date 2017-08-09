@@ -310,6 +310,25 @@
                 </li>
 	        <?php endif; ?>
 
+
+
+
+	        <?php // PATROCINIOS ?>
+	        <?php if( !empty( $obra->getSponsors() ) ): ?>
+                <li class="sgtechd__item">
+                    <h3 class="sgtechd__item__h">Patrocinios:</h3>
+                    <ul class="sgtechd__item__b sgtechd__sponsors">
+
+				        <?php
+				        // RENDER THE PRESS LINKS
+				        foreach( $obra->getSponsors() as $sponsor ): /** @var $sponsor \MGTC\Models\Sponsor */ ?>
+                            <li class="sgtechd__sponsors__item"><a href="<?php echo $sponsor->get_link(); ?>" target="_blank" title="<?php echo $sponsor->get_name() ?>"><?php echo get_the_post_thumbnail( $sponsor->get_ID() ); ?></a></li>
+				        <?php endforeach; ?>
+
+                    </ul>
+                </li>
+	        <?php endif; ?>
+
         </ul>
     </div>
 
