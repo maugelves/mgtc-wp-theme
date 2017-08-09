@@ -387,5 +387,15 @@
 
 
 
+<?php
+$giras = \MGTC\Service\Giras::getInstance()->get_next_giras(6, $obra->getID() );
+if ( !empty( $giras ) ):
+	// Render the Next Giras
+	render_next_giras( $giras );
+endif;
+?>
+
+
+
 
 <?php get_footer(); ?>
