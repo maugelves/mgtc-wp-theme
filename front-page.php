@@ -52,8 +52,8 @@
 
 
 
-
-<section class="bblock hpgiras">
+<?php $obras = \MGTC\Service\Obras::getInstance()->get_active_obras(3); ?>
+<section class="bblock hpobras">
 
     <div class="wrapper">
 
@@ -61,24 +61,24 @@
         <p class="bblock__b">Sigue de cerca los espectáculos actualmente en cartel de Avanti Teatro.</p>
 
 
-        <ul class="hpgiras__items">
+        <ul class="hpobras__items">
         <?php foreach( $obras as $obra ):
         /** @var $obra \MGTC\Models\Obra */
             ?>
-            <li class="hpgiras__item">
-	            <?php echo get_the_post_thumbnail( $obra->getId(), 'post-thumbnail', ['class' => 'hpgiras__item__fi'] ); ?>
-                <h2 class="hpgiras__item__h"><?php echo $obra->getTitle(); ?></h2>
-                <p class="hpgiras__item__b"><?php echo $obra->getShortDescription(); ?></p>
-                <a class="hpgiras__item__l" href="<?php the_permalink( $obra->getID() ); ?>" class="btn--secondary">+ Info</a>
+            <li class="hpobras__item">
+	            <?php echo get_the_post_thumbnail( $obra->getId(), 'post-thumbnail', ['class' => 'hpobras__item__fi'] ); ?>
+                <h2 class="hpobras__item__h"><?php echo $obra->getTitle(); ?></h2>
+                <p class="hpobras__item__b"><?php echo $obra->getShortDescription(); ?></p>
+                <a class="hpobras__item__l" href="<?php the_permalink( $obra->getID() ); ?>" class="btn--secondary">+ Info</a>
             </li>
         <?php endforeach; ?>
         </ul>
 
-        <a class="btn--secondary hpgiras__l" href="#">Ver espectáculos en gira</a>
-        
+        <a class="btn--secondary hpgiras__l" href="<?php echo get_post_type_archive_link('obra') ?>">Ver espectáculos en gira</a>
+
     </div>
 
-</section><!-- END .hpgiras -->
+</section><!-- END .hpobras -->
 
 
 

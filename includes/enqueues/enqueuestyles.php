@@ -15,9 +15,13 @@ function site_styles() {
 	wp_enqueue_style('style');
 
 	// Owl Carousel
-	if( is_singular() ):
+	if(
+		is_singular()
+		|| is_post_type_archive('obra')
+		):
 		wp_enqueue_style('owl' );
 	endif;
+
 }
 add_action( 'wp_enqueue_scripts', 'site_styles' );
 

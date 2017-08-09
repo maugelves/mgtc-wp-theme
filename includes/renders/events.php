@@ -42,7 +42,7 @@ function render_next_giras( $giras ) { ?>
 			<?php endforeach; ?>
 		</ul>
 
-		<a href="#" class="btn--secondary hpevents__btn">Ver todas las obras</a>
+		<a href="<?php echo get_post_type_archive_link('obra'); ?>" class="btn--secondary hpevents__btn">Ver todas las obras</a>
 
 	</section><!-- END .hpevents -->
 
