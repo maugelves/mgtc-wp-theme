@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    # Single Containers
+\*------------------------------------*/
+
+
+.content-wrapper {
+
+}
+
+
+
+
+@media screen and ( min-width: $lg ) {
+
+  .content {
+    display: flex;
+  }
+
+  .content-wrapper {
+    flex: 0 1 70%;
+    margin-right: 4%;
+    width: 70%;
+  }
+
+}

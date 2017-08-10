@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    # Single Siddebar
+\*------------------------------------*/
+
+.sidebar { display: none; }
+
+
+@media screen and ( min-width: $lg ) {
+
+  .sidebar {
+    border-left: 1px solid #D1D1D1;
+    display: block;
+    padding-left: 4%;
+    margin-top: 50px;
+    width: 30%;
+  }
+
+}

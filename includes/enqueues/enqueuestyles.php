@@ -18,6 +18,7 @@ function site_styles() {
 	if(
 		is_singular()
 		|| is_post_type_archive('obra')
+		|| is_post_type_archive('actor')
 		):
 		wp_enqueue_style('owl' );
 	endif;

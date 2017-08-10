@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    # MGTC Actor
+\*------------------------------------*/
+// Actor Social Networks
+.mgtcactorsn {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+  .mgtcactorsn__h {
+    font-size: 30px;
+    margin-bottom: 23px;
+  }
+
+  .mgtcactorsn__items {
+    background-color: #F5F5F5;
+    padding: 20px 27px;
+  }
+
+  .mgtcactorsn__item {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 15px;
+  }
+
+
+
+
+
+// Actor Also Plays In
+.mgtcalsoplaysin {
+  margin-bottom: 50px;
+}
+
+  .mgtcalsoplaysin__h {
+    font-size: 30px;
+    margin-bottom: 23px;
+  }
+
+  .mgtcalsoplaysin__item {
+    align-items: center;
+    border-right: 1px solid #D1D1D1;
+    border-top: 1px solid #D1D1D1;
+    cursor: pointer;
+    display: flex;
+    height: 70px;
+  }
+  .mgtcalsoplaysin__item:last-child{
+    border-bottom: 1px solid #d1d1d1;
+  }
+
+  .mgtcalsoplaysin__item__fi {
+    display: inline-block;
+    height: 100%;
+    margin-right: 15px;
+    width: auto;
+  }
+
+  .mgtcalsoplaysin__item__h {
+    color: $mainColor;
+    font-family: $secondaryFontFamily;
+  }
+
+
+
+.mgtcactortwittertml {
+
+  border: 1px solid #D1D1D1;
+
+}

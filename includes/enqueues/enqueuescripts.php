@@ -22,6 +22,8 @@ function site_scripts() {
 		wp_enqueue_script('singular');
 	endif;
 
+
+
 	if( is_post_type_archive('obra') ):
 		wp_enqueue_script('archive');
 	endif;
