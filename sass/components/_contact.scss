@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    # Contact Form
+\*------------------------------------*/
+
+.mgtcontact {
+
+}
+
+.mgtcontact__row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+  .mgtcontact__label {
+    margin: 0;
+    min-width: 26%;
+  }
+
+  .mgtcontact__input,
+  .mgtcontact__textarea{
+    border-radius: .25rem;
+    flex-grow: 1;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .mgtcontact__error {
+    background-color: #f2dede;
+    border: 1px solid $highlightColor;
+  }
+
+  .mgtcontact__submit {
+    border: none;
+    outline: none;
+  }
+
+
+  .mgtcontact__message {
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .mgtcontact__message--success{
+    @extend .mgtcontact__message;
+
+    color: #464a4e;
+    background-color: #e7e8ea;
+    border-color: #dddfe2;
+  }
+
+
+
+
+
+
+@media screen and ( min-width: $lg ) {
+  .mgtcontact__label {
+    text-align: right;
+    margin-right: 15px;
+  }
+}

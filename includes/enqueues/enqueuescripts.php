@@ -9,6 +9,7 @@ function site_scripts() {
 	wp_register_script('frontpage', get_bloginfo('template_url') . '/js/frontpage.js', array('jquery', 'owl'), false, true);
 	wp_register_script('singular', get_bloginfo('template_url') . '/js/singular.js', array('jquery', 'owl'), false, true);
 	wp_register_script('archive', get_bloginfo('template_url') . '/js/archive.js', array('jquery', 'owl'), false, true);
+	wp_register_script('contacto', get_bloginfo('template_url') . '/js/contacto.js', array('jquery'), false, true);
 
 
 	// ENQUEUE
@@ -26,6 +27,12 @@ function site_scripts() {
 
 	if( is_post_type_archive('obra') ):
 		wp_enqueue_script('archive');
+	endif;
+
+
+	// CONTACTO
+	if( is_page('contacto') ):
+		wp_enqueue_script('contacto');
 	endif;
 
 }

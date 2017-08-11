@@ -256,3 +256,9 @@ label {
   font-weight: 600;
   margin-bottom: 0.357em;
 }
+
+input,
+textarea {
+  border: 1px solid $btnSecondaryBckg;
+  padding: 5px 5px 5px 10px;
+}
