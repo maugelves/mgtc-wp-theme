@@ -11,8 +11,16 @@
     border-left: 1px solid #D1D1D1;
     display: block;
     padding-left: 4%;
+    margin-bottom: 50px;
     margin-top: 50px;
     width: 30%;
   }
+
+
+  .widgettitle {
+    font-size: 25px;
+    margin-top: 40px;
+  }
+  .widgettitle:first-child { margin-top: 0; }
 
 }

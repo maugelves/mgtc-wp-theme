@@ -35,7 +35,7 @@ $actor = \MGTC\Service\Actores::getInstance()->get_by_id( $post->ID );
 
 
 
-				<?php if( get_fields('mgtc_actor_galeria', $actor->getID() ) ): ?>
+				<?php if( get_field('mgtc_actor_galeria', $actor->getID() ) ): ?>
 				<section class="sggallery">
 
 

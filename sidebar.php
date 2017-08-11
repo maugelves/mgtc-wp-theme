@@ -15,6 +15,12 @@
 	$actor->the_twitter_timeline();
 	?>
 
+<?php else: ?>
+
+
+		<?php dynamic_sidebar( 'sidebar' ); ?>
+
+
 <?php endif; ?>
 
 </aside>

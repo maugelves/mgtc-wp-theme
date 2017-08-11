@@ -18,6 +18,109 @@
 
 
 
+// Post Links
+.sgcontent > p > a {
+  border-bottom: 2px solid $highlightColor;
+  color: $mainColor;
+}
+
+
+
+
+
+// Unordered lists
+.sgcontent ul {
+  list-style-type: none;
+  margin-bottom: 1em;
+  padding-left: 2.75em;
+
+  // Remove margin from child UL's
+  & ul { margin-bottom: 0; }
+
+  & > li {
+    margin: 0;
+  }
+
+  & > li:before {
+    color: $highlightColor;
+    content: '\2014';
+    margin-left: -20px;
+    position: absolute;
+  }
+
+}
+
+
+
+
+
+
+// Ordered lists
+.sgcontent ol {
+  counter-reset: item;
+  list-style-type: decimal;
+  margin-bottom: 1em;
+  padding-left: 1.8em;
+
+  // Remove margin from child UL's
+  & ol { margin-bottom: 0; }
+
+  & li { display: block; }
+  & li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: $highlightColor;
+    margin-right: 5px;
+  }
+
+}
+
+
+
+
+
+// Headings
+.sgcontent h1 {
+  font-size: 2.25em;
+  margin-bottom: 1.5em;
+}
+.sgcontent h2 {
+  font-size: 1.87em;
+  margin-bottom: 1.3em;
+}
+.sgcontent h3 {
+  font-size: 1.5em;
+  margin-bottom: 1.1em;
+}
+.sgcontent h4 {
+  font-size: 1.25em;
+  margin-bottom: 0.9em;
+}
+.sgcontent h5 {
+  font-size: 1.125em;
+  margin-bottom: 0.7em;
+}
+.sgcontent h6 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+
+
+
+
+
+// Blockquotes
+.sgcontent blockquote {
+
+}
+.sgcontent blockquote p { margin: 0; }
+
+
+
+
+
+
 @media screen and ( min-width: $sm ) {
 
   .sgcontent {
