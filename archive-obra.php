@@ -38,7 +38,7 @@
 					/** @var $obra \MGTC\Models\Obra */
 					?>
 					<li class="hpobras__item">
-						<?php echo get_the_post_thumbnail( $obra->getId(), 'post-thumbnail', ['class' => 'hpobras__item__fi'] ); ?>
+						<?php echo get_the_post_thumbnail( $obra->getId(), 'post-thumbnail', ['class' => 'hpobras__item__fi', 'onclick' => 'location.href="'. get_the_permalink() . '"'] ); ?>
 						<h2 class="hpobras__item__h"><?php echo $obra->getTitle(); ?></h2>
 						<p class="hpobras__item__b"><?php echo $obra->getShortDescription(); ?></p>
 						<a class="hpobras__item__l" href="<?php the_permalink( $obra->getID() ); ?>" class="btn--secondary">+ Info</a>

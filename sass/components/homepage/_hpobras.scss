@@ -121,6 +121,9 @@
 
 @media screen and ( min-width: $lg ) {
 
-  .hpobras__item { flex: 0 0 32%; }
+  .hpobras__item {
+    cursor: pointer;
+    flex: 0 0 32%;
+  }
 
 }
