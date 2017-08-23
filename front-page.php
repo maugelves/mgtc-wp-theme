@@ -43,7 +43,7 @@
     <p class="bblock__b">Creemos en un teatro sin artificio donde la palabra y la interpretación propongan una serie de interrogantes que inviten al espectador a la reflexión.</p>
 
     <div class="linkcontainer">
-        <a class="link-right" href="#">Conócenos más a fondo <span class="icon-tc-link"></span></a>
+        <a class="link-right" href="<?php bloginfo('url'); ?>/quienes-somos/">Conócenos más a fondo <span class="icon-tc-link"></span></a>
     </div>
 
 
@@ -109,14 +109,19 @@
                     <?php
                     foreach( $actores as $actor ): /* @var $actor \MGTC\Models\Actor */ ?>
                         <li class="hpactores__item">
-                            <?php echo get_the_post_thumbnail( $actor->getID(), 'post-thumbnail', array( 'class' => 'hpactores__item__fi' ) ); ?>
-                            <p class="hpactores__item__h"><?php echo $actor->getNombre(); ?></p>
+                            <?php
+                            $permalink_actor =  get_permalink( $actor->getID() );
+                            $attr = array(
+                                    'class' => 'hpactores__item__fi',
+                                    'onclick'   => 'location.href = "' . $permalink_actor . '"'
+                                    );
+                            echo get_the_post_thumbnail( $actor->getID(), 'post-thumbnail', $attr );
+                            ?>
+                            <a href="<?php echo $permalink_actor ?>" class="hpactores__item__h"><?php echo $actor->getNombre(); ?></a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
             <?php endif; ?>
-
-        <a href="#" class="btn--secondary hpevents__btn">Más actores</a>
 
     </div>
 

@@ -52,6 +52,7 @@
 
     .hpactores__item {
       display: inline-block;
+      cursor: pointer;
       text-align: center;
     }
 
@@ -63,6 +64,8 @@
     }
 
     .hpactores__item__h {
+      display: block;
+      color: $mainColor;
       font-size: 28px;
       padding-bottom: 20px;
       padding-top: 20px;
