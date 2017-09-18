@@ -55,7 +55,10 @@
 
 
 
-
+<?php
+$images = get_field('mgtc_imagenes_obra', $obra->getID() );
+if( $images ):
+?>
 <section class="sggallery">
 
     <div class="wrapper sgcontent__wrapper">
@@ -64,9 +67,7 @@
 
         <div class="sggallery__wrapper owl-carousel">
 
-            <?php
-            $images = get_field('mgtc_imagenes_obra', $obra->getID() );
-            foreach( $images as $image ): ?>
+            <?php foreach( $images as $image ): ?>
                 <img class="sgallery__item" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'] ); ?>">
             <?php endforeach; ?>
 
@@ -75,7 +76,7 @@
     </div>
 
 </section>
-
+<?php endif; ?>
 
 
 
@@ -366,7 +367,7 @@
 	        <?php // PATROCINIOS ?>
 	        <?php if( !empty( $obra->getSponsors() ) ): ?>
                 <li class="sgtechd__item">
-                    <h3 class="sgtechd__item__h">Patrocinios:</h3>
+                    <h3 class="sgtechd__item__h">Co-Productores:</h3>
                     <ul class="sgtechd__item__b sgtechd__sponsors">
 
 				        <?php

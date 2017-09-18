@@ -74,10 +74,13 @@
                 <nav class="header__nav" role="navigation">
 
                     <?php
-                    $args = array( 'container'     => '' );
+                    $args = array(
+                                'class'         => 'header_nav',
+                                'container'     => ''
+                    );
                     wp_nav_menu( $args );
                     ?>
-
+                    <?php mg_social_links(); ?>
                 </nav>
 
         </div>

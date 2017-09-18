@@ -66,21 +66,25 @@
 
   .header__nav {
     background-color: transparent;
+    box-shadow: none;
     display: block;
+    justify-content: flex-end;
     position: relative;
     top: auto;
     width: auto;
   }
 
   #menu-basic-links {
-    align-items: center;
+    border-right: 2px solid white;
     display: flex;
-    justify-content: space-between;
+    margin-right: 20px;
+    padding-right: 20px;
+    width: auto;
   }
 
   .header__nav .menu-item {
     border: 0;
-    display: flex;
+    display: inline-block;
     margin-right: 20px;
     padding: 0;
   }
