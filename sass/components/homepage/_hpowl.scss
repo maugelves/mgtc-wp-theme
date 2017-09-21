@@ -8,16 +8,16 @@
 }
 
 .hlobras .owl-prev {
-  left: 10%;
+  left: 3%;
   position: absolute;
 }
 
 .hlobras .owl-next {
-  right: 10%;
+  right: 3%;
   position: absolute;
 }
 
-.hlobras .icon-slider-arrow { font-size: 40px; }
+.hlobras .icon-slider-arrow { font-size: 30px; }
 
 .hlobras .icon-slider-arrow::before { transition: color 0.4s; }
 .hlobras .icon-slider-arrow:hover::before { color: $highlightColor; }
@@ -25,4 +25,24 @@
 .hlobras .icon-slider-arrow--reverse {
   display: block;
   transform: rotate(180deg);
+}
+
+
+@media screen and ( min-width: $sm ) {
+
+  .hlobras .owl-prev { left: 5%; }
+  .hlobras .owl-next { right: 5%; }
+
+  .hlobras .icon-slider-arrow { font-size: 35px; }
+
+}
+
+
+@media screen and ( min-width: $lg ) {
+
+  .hlobras .owl-prev { left: 10%; }
+  .hlobras .owl-next { right: 10%; }
+
+  .hlobras .icon-slider-arrow { font-size: 40px; }
+
 }
