@@ -30,6 +30,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-slider-arrow:before {
+  content: "\e900";
+  color: #fff;
+}
 .icon-twitter:before {
   content: "\f099";
 }

@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    # Home Page Owl
+\*------------------------------------*/
+.hlobras .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.hlobras .owl-prev {
+  left: 10%;
+  position: absolute;
+}
+
+.hlobras .owl-next {
+  right: 10%;
+  position: absolute;
+}
+
+.hlobras .icon-slider-arrow { font-size: 40px; }
+
+.hlobras .icon-slider-arrow::before { transition: color 0.4s; }
+.hlobras .icon-slider-arrow:hover::before { color: $highlightColor; }
+
+.hlobras .icon-slider-arrow--reverse {
+  display: block;
+  transform: rotate(180deg);
+}

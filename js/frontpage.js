@@ -4,16 +4,18 @@ jQuery(document).ready(function($){
         headerCarousel: function(){
 
             $(".hlobras").owlCarousel({
-                autoplay: false,
+                autoplay: true,
                 dots: false,
                 items: 1,
-                loop: true
+                loop: true,
+                nav: true,
+                navText: ["<span class='icon-slider-arrow'></span>", "<span class='icon-slider-arrow icon-slider-arrow--reverse'></span>"]
             });
 
 
             // Initialice Obras en Gira solo si la resolución del
             // Dispositivo es mayor a 768px
-            if( $(window).width() >= 768 ){
+            /*if( $(window).width() >= 768 ){
 
                 $(".hpactores__list").addClass('owl-carousel');
                 $(".hpactores__list").owlCarousel({
@@ -32,7 +34,7 @@ jQuery(document).ready(function($){
                     }
                 });
 
-            }
+            }*/
 
         },
         init: function(){

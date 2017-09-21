@@ -28,9 +28,13 @@
         <h2 class="sgcta__h">Sobre "<?php echo $obra->getTitle(); ?>"</h2>
         <p class="sgcta__b"><?php echo $obra->getShortDescription(); ?></p>
 
+        <?php
+        $giras = \MGTC\Service\Giras::getInstance()->get_next_giras(6, $obra->getID() );
+        if( $giras ): ?>
         <div class="linkcontainer">
             <a href="#" class="link-right">Consultar la gira <span class="icon-tc-link"></span></a>
         </div>
+        <?php endif; ?>
 
     </div>
 
@@ -389,7 +393,6 @@ if( $images ):
 
 
 <?php
-$giras = \MGTC\Service\Giras::getInstance()->get_next_giras(6, $obra->getID() );
 if ( !empty( $giras ) ):
 	// Render the Next Giras
 	render_next_giras( $giras );

@@ -47,7 +47,7 @@ function enviar_formulario_por_email(){
 
 	En nuestro caso vamos a mandar un email con el nombre y el mensaje del usuario.
 	*/
-	wp_mail( get_bloginfo('admin_email'), "Avanti Teatro Web - Formulario de contacto", $body, $headers );
+	wp_mail( 'avantiteatrosl@gmail.com', "Avanti Teatro Web - Formulario de contacto", $body, $headers );
 
 
 	/* Una vez que hayamos trabajado con los datos debemos

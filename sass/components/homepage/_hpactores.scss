@@ -47,14 +47,21 @@
 
   .hpactores__list {
     max-width: none;
+    text-align: center;
   }
 
 
     .hpactores__item {
       display: inline-block;
       cursor: pointer;
+      margin-right: 15px;
       text-align: center;
     }
+
+      .hpactores__item:last-child {
+        border-bottom: 0;
+        margin-right: 0;
+      }
 
     .hpactores__item__fi {
       height: 233px;

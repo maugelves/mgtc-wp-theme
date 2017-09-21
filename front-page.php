@@ -25,6 +25,7 @@
             </div>
 
 
+
         </div>
         <?php endif; ?>
 
@@ -39,7 +40,7 @@
 
 <section class="bblock wrapper">
 
-    <h3 class="bblock__h">Somos la Compañía de <span>Teatro Avanti</span></h3>
+    <h3 class="bblock__h">Somos <span>Avanti Teatro</span></h3>
     <p class="bblock__b">Creemos en un teatro sin artificio donde la palabra y la interpretación propongan una serie de interrogantes que inviten al espectador a la reflexión.</p>
 
     <div class="linkcontainer">
@@ -99,8 +100,7 @@
 
     <div class="wrapper">
 
-        <h2 class="bblock__h">Nuestros <span>actores</span></h2>
-        <p class="bblock__b">Actores en plantilla y colaboraciones</p>
+        <h2 class="bblock__h">Quién es <span>Avanti Teatro</span></h2>
 
         <?php
             $actores = \MGTC\Service\Actores::getInstance()->get_actors_for_homepage();
