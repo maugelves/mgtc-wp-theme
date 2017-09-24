@@ -14,7 +14,12 @@
     height: 300px;
 }
 
-.owl-item > .sgallery__item {
+.owl-item > .fancybox {
+  height:285px;
+  width:100%;
+}
+
+.owl-item .sgallery__item{
   object-fit: cover;
   object-position: center center;
   height:285px;

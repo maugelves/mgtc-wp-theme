@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
 
             // Initialzece galleries
             $(".sggallery__wrapper").owlCarousel({
-                autoplay: true,
+                //autoplay: true,
                 items: 1,
                 dots: false,
                 loop: true,

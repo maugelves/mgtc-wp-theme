@@ -72,7 +72,9 @@ if( $images ):
         <div class="sggallery__wrapper owl-carousel">
 
             <?php foreach( $images as $image ): ?>
-                <img class="sgallery__item" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'] ); ?>">
+                <a href="<?php echo $image['sizes']['large']; ?>" class="fancybox image">
+                    <img class="sgallery__item" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'] ); ?>">
+                </a>
             <?php endforeach; ?>
 
         </div>
