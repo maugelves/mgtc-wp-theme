@@ -10,6 +10,8 @@ jQuery(document).ready(function($){
                 dots: false,
                 loop: true,
                 margin: 20,
+                nav: true,
+                navText: ["<span class='icon-slider-arrow'></span>", "<span class='icon-slider-arrow icon-slider-arrow--reverse'></span>"],
                 responsive: {
                     768: {
                         items: 2,
