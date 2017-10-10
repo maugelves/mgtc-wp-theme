@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
                             items: 2,
                             margin: 20
                         },
-                        1440: {
+                        1024: {
                             items: 3,
                             margin: 40
                         }

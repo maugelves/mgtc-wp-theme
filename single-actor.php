@@ -46,7 +46,9 @@ $actor = \MGTC\Service\Actores::getInstance()->get_by_id( $post->ID );
 
 							<?php $images = get_field('mgtc_actor_galeria', $actor->getID() );
 							foreach( $images as $image ): ?>
-								<img class="sgallery__item" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'] ); ?>">
+                                <a href="<?php echo $image['sizes']['large']; ?>" class="fancybox image">
+								    <img class="sgallery__item" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'] ); ?>">
+                                </a>
 							<?php endforeach; ?>
 						
 					</div>
